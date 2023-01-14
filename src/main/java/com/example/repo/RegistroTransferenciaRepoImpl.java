@@ -13,6 +13,7 @@ import jakarta.transaction.Transactional;
 @Transactional
 public class RegistroTransferenciaRepoImpl implements IRegistroTransferenciaRepo {
 
+	
 	@PersistenceContext
 	private EntityManager entityManager;
 	

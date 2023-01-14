@@ -57,6 +57,8 @@ public class GestorTransferenciaServiceImpl implements IGestorTransferenciaServi
 		bancariaService.actualizar(cuentaBancariaOrigen);
 		/////
 		
+		iRegistroTransferenciaService.agregar(registroTransferencia);
+		
 		
 	}
 
