@@ -1,4 +1,4 @@
-package com.example.modelo;
+package com.example.demo.e1.modelo;
 
 import java.math.BigDecimal;
 
@@ -7,8 +7,8 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name="cuenta_bancaria")
+//@Entity
+//@Table(name="cuenta_bancaria")
 public class CuentaBancaria {
 
 	@Id

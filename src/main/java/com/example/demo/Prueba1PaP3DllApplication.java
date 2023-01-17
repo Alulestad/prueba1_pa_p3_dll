@@ -7,9 +7,9 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.example.modelo.CuentaBancaria;
-import com.example.service.ICuentaBancariaService;
-import com.example.service.IGestorTransferenciaService;
+import com.example.demo.correccion.modelo.CuentaBancaria;
+import com.example.demo.correccion.service.ICuentaBancariaService;
+import com.example.demo.correccion.service.IGestorTransferenciaService;
 
 @SpringBootApplication
 public class Prueba1PaP3DllApplication implements CommandLineRunner{
@@ -41,14 +41,14 @@ public class Prueba1PaP3DllApplication implements CommandLineRunner{
 		cuenta2.setTipo("AHORROS");
 		
 		
-		this.bancariaService.agregar(cuenta1);
-		this.bancariaService.agregar(cuenta2);
+		this.bancariaService.guardar(cuenta1);
+		this.bancariaService.guardar(cuenta2);
 		
 		
-		this.gestorTransferenciaService.transferir("234", "235", new BigDecimal(10));
+		this.gestorTransferenciaService.transferir("234", "235", new BigDecimal(100));
 		
 		
-		CuentaBancaria cuentaOrigenMod= bancariaService.buscar("234");
+		CuentaBancaria cuentaOrigenMod= bancariaService.encontrar("234");
 		System.out.println("La cuenta de origen: ");
 		System.out.println(cuentaOrigenMod);
 		

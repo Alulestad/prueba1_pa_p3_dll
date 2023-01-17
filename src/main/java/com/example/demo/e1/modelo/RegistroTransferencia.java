@@ -1,4 +1,4 @@
-package com.example.modelo;
+package com.example.demo.e1.modelo;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -11,8 +11,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name="registro_transferencia")
+//@Entity
+//@Table(name="registro_transferencia")
 public class RegistroTransferencia {
 	
 	@Id

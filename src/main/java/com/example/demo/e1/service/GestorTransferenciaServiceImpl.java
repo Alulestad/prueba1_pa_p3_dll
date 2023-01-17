@@ -1,4 +1,4 @@
-package com.example.service;
+package com.example.demo.e1.service;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -7,10 +7,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.example.modelo.CuentaBancaria;
-import com.example.modelo.RegistroTransferencia;
+import com.example.demo.e1.modelo.CuentaBancaria;
+import com.example.demo.e1.modelo.RegistroTransferencia;
 
-@Service
+//@Service
 public class GestorTransferenciaServiceImpl implements IGestorTransferenciaService {
 
 	@Autowired
@@ -52,6 +52,8 @@ public class GestorTransferenciaServiceImpl implements IGestorTransferenciaServi
 		saldoDestino.add(monto);
 		saldoDestino.subtract(comision);
 		cuentaBancariaDestino.setSaldo(saldoDestino);
+		
+		System.out.println("Cuenta destino saldo nuevo: "+saldoDestino);
 		
 		bancariaService.actualizar(cuentaBancariaDestino);
 		bancariaService.actualizar(cuentaBancariaOrigen);

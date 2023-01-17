@@ -1,10 +1,10 @@
-package com.example.service;
+package com.example.demo.correccion.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
-import com.example.modelo.RegistroTransferencia;
-import com.example.repo.ICuentaBancariaRepo;
-import com.example.repo.IRegistroTransferenciaRepo;
+import com.example.demo.correccion.modelo.RegistroTransferencia;
+import com.example.demo.correccion.repo.ICuentaBancariaRepo;
+import com.example.demo.correccion.repo.IRegistroTransferenciaRepo;
 
 public interface IRegistroTransferenciaService {
 

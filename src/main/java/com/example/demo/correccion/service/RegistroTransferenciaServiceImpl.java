@@ -1,11 +1,11 @@
-package com.example.service;
+package com.example.demo.correccion.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import com.example.modelo.RegistroTransferencia;
-import com.example.repo.IRegistroTransferenciaRepo;
+import com.example.demo.correccion.modelo.RegistroTransferencia;
+import com.example.demo.correccion.repo.IRegistroTransferenciaRepo;
 
 @Service
 public class RegistroTransferenciaServiceImpl implements IRegistroTransferenciaService {

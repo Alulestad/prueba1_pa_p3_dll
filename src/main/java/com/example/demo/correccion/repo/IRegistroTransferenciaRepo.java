@@ -1,6 +1,6 @@
-package com.example.repo;
+package com.example.demo.correccion.repo;
 
-import com.example.modelo.RegistroTransferencia;
+import com.example.demo.correccion.modelo.RegistroTransferencia;
 
 public interface IRegistroTransferenciaRepo {
 

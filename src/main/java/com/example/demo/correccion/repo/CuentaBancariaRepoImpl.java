@@ -1,10 +1,8 @@
-package com.example.repo;
+package com.example.demo.correccion.repo;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
-import com.example.modelo.CuentaBancaria;
+import com.example.demo.correccion.modelo.CuentaBancaria;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
@@ -35,6 +33,12 @@ public class CuentaBancariaRepoImpl implements ICuentaBancariaRepo {
 	public void actualizar(CuentaBancaria bancaria) {
 		// TODO Auto-generated method stub
 		this.entityManager.merge(bancaria);
+	}
+
+	@Override
+	public void eliminar(String numero) {
+		// TODO Auto-generated method stub
+		this.entityManager.remove(numero);
 	}
 
 }

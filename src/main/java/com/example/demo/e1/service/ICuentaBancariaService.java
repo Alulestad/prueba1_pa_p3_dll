@@ -1,10 +1,10 @@
-package com.example.service;
+package com.example.demo.e1.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.modelo.CuentaBancaria;
-import com.example.repo.ICuentaBancariaRepo;
+import com.example.demo.e1.repo.ICuentaBancariaRepo;
+import com.example.demo.e1.modelo.CuentaBancaria;
 
 public interface ICuentaBancariaService {
 	

@@ -1,6 +1,6 @@
-package com.example.repo;
+package com.example.demo.e1.repo;
 
-import com.example.modelo.CuentaBancaria;
+import com.example.demo.e1.modelo.CuentaBancaria;
 
 public interface ICuentaBancariaRepo {
 	//CRUD
