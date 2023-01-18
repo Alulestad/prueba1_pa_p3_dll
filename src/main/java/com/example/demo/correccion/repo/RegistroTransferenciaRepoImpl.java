@@ -22,10 +22,6 @@ public class RegistroTransferenciaRepoImpl implements IRegistroTransferenciaRepo
 		this.entityManager.persist(registroTransferencia);
 	}
 
-	@Override
-	public RegistroTransferencia buscar(Integer id) {
-		RegistroTransferencia registroTransferencia=this.entityManager.find(RegistroTransferencia.class, id);
-		return registroTransferencia;
-	}
+
 
 }

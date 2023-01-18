@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import com.example.demo.correccion.modelo.CuentaBancaria;
 import com.example.demo.correccion.service.ICuentaBancariaService;
-import com.example.demo.correccion.service.IGestorTransferenciaService;
+import com.example.demo.correccion.service.IRegistroTransferenciaService;
 
 @SpringBootApplication
 public class Prueba1PaP3DllApplication implements CommandLineRunner{
@@ -18,8 +18,9 @@ public class Prueba1PaP3DllApplication implements CommandLineRunner{
 	private ICuentaBancariaService bancariaService;
 	
 	@Autowired
-	private IGestorTransferenciaService gestorTransferenciaService;
+	private IRegistroTransferenciaService iRegistroTransferenciaService;
 	
+
 	public static void main(String[] args) {
 		SpringApplication.run(Prueba1PaP3DllApplication.class, args);
 	}
@@ -32,26 +33,26 @@ public class Prueba1PaP3DllApplication implements CommandLineRunner{
 		cuenta1.setNumero("234");
 		cuenta1.setCedula("12389127");
 		cuenta1.setSaldo(new BigDecimal(1000));
-		cuenta1.setTipo("CORRIENTE");
+		cuenta1.setTipo("A");
 		
 		CuentaBancaria cuenta2=new CuentaBancaria();
 		cuenta2.setNumero("235");
 		cuenta2.setCedula("13456127");
 		cuenta2.setSaldo(new BigDecimal(2000));
-		cuenta2.setTipo("AHORROS");
+		cuenta2.setTipo("C");
 		
 		
 		this.bancariaService.guardar(cuenta1);
 		this.bancariaService.guardar(cuenta2);
 		
 		
-		this.gestorTransferenciaService.transferir("234", "235", new BigDecimal(100));
+		this.iRegistroTransferenciaService.realizar("234", "235", new BigDecimal(100));
 		
+		System.out.println("Saldo cuenta origen");
+		System.out.println(cuenta1.getSaldo());
 		
-		CuentaBancaria cuentaOrigenMod= bancariaService.encontrar("234");
-		System.out.println("La cuenta de origen: ");
-		System.out.println(cuentaOrigenMod);
-		
+		System.out.println("Saldo cuenta origen actual");
+		System.out.println(this.bancariaService.encontrar("234").getSaldo());
 	}
 
 }

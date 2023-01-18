@@ -1,5 +1,7 @@
 package com.example.demo.correccion.service;
 
+import java.math.BigDecimal;
+
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.demo.correccion.modelo.RegistroTransferencia;
@@ -11,8 +13,8 @@ public interface IRegistroTransferenciaService {
 
 	
 	
-	public void agregar (RegistroTransferencia registroTransferencia);
+	public void realizar (String numeroOrigen, String numeroDestino, BigDecimal monto);
 
-	public RegistroTransferencia buscar(Integer id);
+
 	
 }
